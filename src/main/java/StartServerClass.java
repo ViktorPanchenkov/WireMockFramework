@@ -20,6 +20,11 @@ public class StartServerClass {
         mockResponce.withStatusMessage("Hello World");
         mockResponce.withHeader("Content-Type","text/json");
         mockResponce.withHeader("token","1111");
+        mockResponce.withHeader("Set-Cookie","session_id933514");
+        mockResponce.withBody("text in the body");
+
+        WireMock.stubFor(WireMock.get("/users/1").willReturn(mockResponce));
+
 
     }
 }
