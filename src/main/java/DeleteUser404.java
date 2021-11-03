@@ -2,7 +2,7 @@ import com.github.tomakehurst.wiremock.client.ResponseDefinitionBuilder;
 import com.github.tomakehurst.wiremock.client.WireMock;
 
 public class DeleteUser404 {
-    public static void CreateResponceDefForDeleteUser_404(){
+    public static void createResponceDefForDeleteUser404(){
         ResponseDefinitionBuilder mokCreateUserResponce = new ResponseDefinitionBuilder();
         mokCreateUserResponce.withStatus(404);
         mokCreateUserResponce.withStatusMessage("Not found");

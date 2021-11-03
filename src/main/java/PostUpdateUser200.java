@@ -1,7 +1,7 @@
 import com.github.tomakehurst.wiremock.client.ResponseDefinitionBuilder;
 import com.github.tomakehurst.wiremock.client.WireMock;
 
-public class PostUpdateUser_200 {
+public class PostUpdateUser200 {
 
 
     public static void UpdateUser_200_status(){

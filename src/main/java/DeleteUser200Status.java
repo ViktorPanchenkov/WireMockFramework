@@ -1,10 +1,10 @@
 import com.github.tomakehurst.wiremock.client.ResponseDefinitionBuilder;
 import com.github.tomakehurst.wiremock.client.WireMock;
 
-public class DeleteUser_200_Status {
+public class DeleteUser200Status {
 
 
-    public static void CreateResponceDefForDeleteUser_200(){
+    public static void createResponseDefForDeleteUser200(){
         ResponseDefinitionBuilder mokCreateUserResponce = new ResponseDefinitionBuilder();
         mokCreateUserResponce.withStatus(200);
         mokCreateUserResponce.withStatusMessage("Ok");

@@ -1,10 +1,10 @@
 import com.github.tomakehurst.wiremock.client.ResponseDefinitionBuilder;
 import com.github.tomakehurst.wiremock.client.WireMock;
 
-public class GetUserRequest_EmptyBody {
+public class GetUserRequestEmptyBody {
 
 
-    public static void GetUser_EmptyResponce(){
+    public static void getUserEmptyResponce(){
         ResponseDefinitionBuilder mokCreateUserResponce = new ResponseDefinitionBuilder();
         mokCreateUserResponce.withStatus(200);
         mokCreateUserResponce.withStatusMessage("Not found");

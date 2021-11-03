@@ -1,10 +1,10 @@
 import com.github.tomakehurst.wiremock.client.ResponseDefinitionBuilder;
 import com.github.tomakehurst.wiremock.client.WireMock;
 
-public class PostCreateUser_201 {
+public class PostCreateUser201 {
 
 
-    public static void CreateUser_201_status(){
+    public static void createUser201Status(){
         ResponseDefinitionBuilder mokCreateUserResponce = new ResponseDefinitionBuilder();
         mokCreateUserResponce.withStatus(201);
         mokCreateUserResponce.withStatusMessage("Ok");
@@ -18,10 +18,10 @@ public class PostCreateUser_201 {
                 "  \"Role\": \"User\",\n" +
                 "  \"Age\": 25\n" +
                 "}");
-        WireMock.stubFor(WireMock.post("/users").willReturn(mokCreateUserResponce));
+        WireMock.stubFor(WireMock.post("/users/add").willReturn(mokCreateUserResponce));
     }
 
-    public static void CreateUser_201_statusJson(){
+    public static void createUser201StatusJson(){
         ResponseDefinitionBuilder mokCreateUserResponce = new ResponseDefinitionBuilder();
         mokCreateUserResponce.withStatus(201);
         mokCreateUserResponce.withStatusMessage("Ok");
