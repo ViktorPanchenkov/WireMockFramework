@@ -44,8 +44,8 @@ public class MockTests {
 
     }
     @Test
-    public void CheckUserResponce_404(){
-        GetUserRequest_404_status.GetUser_404();
+    public void CheckUserEmptyResponce(){
+        GetUserRequest_EmptyBody.GetUser_EmptyResponce();
         String testApi = "http://localhost:" + Port + "/users/2";
         System.out.println("Servere to be hit: " + testApi);
 
@@ -55,9 +55,9 @@ public class MockTests {
 
                 .then().log().all().
                         statusCode(200)
-                .assertThat().body("ID",equalTo(15))
-                .assertThat().body("UserName",equalTo("Ivan"))
-                .assertThat().body("Role",equalTo("Slave"))
+                .assertThat().body(hasKey("ID"))
+                .assertThat().body(hasKey("UserName"))
+                .assertThat().body(hasKey("Role"))
                 .extract().response();
         assertThat(response.getHeader("token"),equalTo("6666gsdfsdf"));
 
